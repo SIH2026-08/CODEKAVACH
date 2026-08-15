@@ -1,0 +1,1255 @@
+/* =========================================================
+   CODEKAVACH / RESQROUTE
+   EMERGENCY SOS PAGE
+   ========================================================= */
+
+.sos-page {
+  min-height: 100vh;
+
+  background: #0d1516;
+  color: #dce4e5;
+
+  font-family: "Inter", sans-serif;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.sos-topbar {
+  position: fixed;
+
+  top: 0;
+  left: 256px;
+  right: 0;
+
+  height: 64px;
+
+  z-index: 30;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  background: #0d1516;
+
+  border-bottom: 1px solid #3b494c;
+}
+
+.sos-mobile-brand {
+  display: none;
+}
+
+.sos-search {
+  width: 256px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 12px;
+
+  color: #849396;
+
+  background: #192122;
+
+  border: 1px solid #3b494c;
+
+  border-radius: 999px;
+}
+
+.sos-search:focus-within {
+  border-color: #00e5ff;
+}
+
+.sos-search input {
+  width: 100%;
+
+  background: transparent;
+
+  border: none;
+  outline: none;
+
+  color: #dce4e5;
+
+  font-size: 14px;
+}
+
+.sos-search input::placeholder {
+  color: #849396;
+}
+
+.sos-topbar-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
+.sos-topbar-icon {
+  position: relative;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #bac9cc;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+.sos-topbar-icon:hover {
+  color: #00e5ff;
+}
+
+.sos-notification-dot {
+  position: absolute;
+
+  top: 5px;
+  right: 5px;
+
+  width: 7px;
+  height: 7px;
+
+  background: #ffb4ab;
+
+  border-radius: 50%;
+
+  animation: sos-pulse 2s infinite;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sos-sidebar {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  width: 256px;
+  height: 100vh;
+
+  z-index: 40;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+
+  background: #0d1516;
+
+  border-right: 1px solid #3b494c;
+}
+
+.sos-sidebar-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 32px;
+}
+
+.sos-logo {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #00363d;
+
+  background: #00e5ff;
+
+  border-radius: 5px;
+}
+
+.sos-sidebar-brand h1 {
+  margin: 0;
+
+  color: #00e5ff;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.sos-sidebar-brand p {
+  margin: 2px 0 0;
+
+  color: #849396;
+
+  font-size: 12px;
+}
+
+.sos-navigation {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  flex: 1;
+}
+
+.sos-nav-link {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 11px 12px;
+
+  color: #bac9cc;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 8px;
+
+  text-align: left;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.sos-nav-link:hover {
+  background: #242b2d;
+
+  color: #dce4e5;
+}
+
+.sos-nav-active {
+  color: #ffb4ab;
+
+  background: #192122;
+
+  border-right: 2px solid #00e5ff;
+
+  font-weight: 700;
+}
+
+.sos-system-status {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 14px 8px;
+
+  color: #00e5ff;
+
+  border-top: 1px solid #3b494c;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.sos-main {
+  min-height: 100vh;
+
+  margin-left: 256px;
+
+  padding: 96px 40px 40px;
+
+  background: #0d1516;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.sos-page-header {
+  max-width: 850px;
+
+  margin: 0 auto 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.sos-warning-icon {
+  width: 96px;
+  height: 96px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 16px;
+
+  color: #ffb4ab;
+
+  background: rgba(147, 0, 10, 0.2);
+
+  border-radius: 50%;
+
+  animation: sos-pulse 2s infinite;
+}
+
+.sos-page-header h1 {
+  margin: 0 0 6px;
+
+  color: #ffb4ab;
+
+  font-size: 48px;
+  line-height: 56px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+}
+
+.sos-page-header p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: #bac9cc;
+
+  font-size: 18px;
+  line-height: 28px;
+}
+
+
+/* =========================================================
+   CONTENT GRID
+   ========================================================= */
+
+.sos-content-grid {
+  max-width: 1152px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 1fr)
+    minmax(450px, 2fr);
+
+  gap: 24px;
+}
+
+.sos-left-column,
+.sos-right-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.sos-card {
+  padding: 20px;
+
+  background: #151b26;
+
+  border: 1px solid #2d3748;
+
+  border-radius: 12px;
+}
+
+.location-card {
+  box-shadow:
+    0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.sos-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 12px;
+
+  margin-bottom: 12px;
+
+  border-bottom: 1px solid #2d3748;
+}
+
+.sos-card-header h2 {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 0;
+
+  color: #dce4e5;
+
+  font-size: 18px;
+  line-height: 26px;
+
+  font-weight: 600;
+}
+
+.sos-card-header h2 svg {
+  color: #00e5ff;
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.location-verified {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 3px 8px;
+
+  color: #00e5ff;
+
+  background: rgba(0, 229, 255, 0.1);
+
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+}
+
+.location-verified span {
+  width: 7px;
+  height: 7px;
+
+  background: #00e5ff;
+
+  border-radius: 50%;
+
+  animation: sos-pulse 2s infinite;
+}
+
+.location-map {
+  position: relative;
+
+  width: 100%;
+  height: 128px;
+
+  overflow: hidden;
+
+  margin-bottom: 10px;
+
+  border: 1px solid #3b494c;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #101a20,
+      #18242b
+    );
+}
+
+.fake-map-grid {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      35deg,
+      transparent 45%,
+      rgba(132, 147, 150, 0.18) 46%,
+      transparent 47%
+    ),
+    linear-gradient(
+      125deg,
+      transparent 45%,
+      rgba(132, 147, 150, 0.15) 46%,
+      transparent 47%
+    );
+
+  background-size: 80px 60px;
+}
+
+.map-road {
+  position: absolute;
+
+  height: 2px;
+
+  background: rgba(186, 201, 204, 0.22);
+
+  transform-origin: left;
+}
+
+.map-road-one {
+  width: 150%;
+
+  left: -10%;
+  top: 55%;
+
+  transform: rotate(-12deg);
+}
+
+.map-road-two {
+  width: 130%;
+
+  left: -5%;
+  top: 25%;
+
+  transform: rotate(18deg);
+}
+
+.map-road-three {
+  width: 110%;
+
+  left: 20%;
+  top: 75%;
+
+  transform: rotate(-30deg);
+}
+
+.map-location-marker {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 25px;
+  height: 25px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 229, 255, 0.15);
+
+  border: 1px solid #00e5ff;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 15px rgba(0, 229, 255, 0.8);
+
+  animation: map-marker-pulse 2s infinite;
+}
+
+.map-location-marker span {
+  width: 7px;
+  height: 7px;
+
+  background: #00e5ff;
+
+  border-radius: 50%;
+}
+
+.map-gradient {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(21, 27, 38, 0.9),
+      transparent
+    );
+}
+
+.gps-lock {
+  position: absolute;
+
+  bottom: 8px;
+  left: 8px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #00e5ff;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 12px;
+}
+
+.refresh-location {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-bottom: 8px;
+
+  padding: 4px 0;
+
+  color: #849396;
+
+  background: transparent;
+
+  border: none;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.refresh-location:hover {
+  color: #00e5ff;
+}
+
+.coordinates {
+  margin-bottom: 5px;
+
+  color: #849396;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 13px;
+}
+
+.coordinates span {
+  color: #3b494c;
+}
+
+.location-name {
+  color: #dce4e5;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.location-accuracy {
+  margin: 8px 0 0;
+
+  color: #849396;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   CONTACTS
+   ========================================================= */
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px;
+
+  background: #192122;
+
+  border: 1px solid #3b494c;
+
+  border-radius: 8px;
+}
+
+.contact-type {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #00e5ff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+}
+
+.contact-secondary {
+  color: #b9c8de;
+}
+
+.contact-card h3 {
+  margin: 0;
+
+  color: #dce4e5;
+
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.contact-card p {
+  margin: 2px 0 0;
+
+  color: #849396;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 13px;
+}
+
+.call-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #dce4e5;
+
+  background: #333a3c;
+
+  border: 1px solid #3b494c;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.call-button:hover {
+  background: #2e3638;
+
+  color: #00e5ff;
+}
+
+.dispatch-call {
+  color: #ffb4ab;
+
+  background: rgba(147, 0, 10, 0.2);
+
+  border-color: rgba(255, 180, 171, 0.5);
+}
+
+
+/* =========================================================
+   SITUATION DETAILS
+   ========================================================= */
+
+.situation-card {
+  padding: 24px;
+}
+
+.situation-title {
+  margin: 0 0 20px;
+
+  color: #dce4e5;
+
+  font-size: 24px;
+  line-height: 32px;
+
+  font-weight: 600;
+}
+
+.emergency-selection {
+  margin-bottom: 24px;
+}
+
+.emergency-selection > label,
+.description-section > label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+
+  color: #bac9cc;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+}
+
+.emergency-type-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+}
+
+.emergency-type-button {
+  position: relative;
+
+  min-height: 94px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 10px;
+
+  color: #dce4e5;
+
+  background: #192122;
+
+  border: 1px solid #2d3748;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.emergency-type-button:hover {
+  border-color: #00e5ff;
+
+  background: rgba(0, 229, 255, 0.1);
+}
+
+.emergency-type-button svg {
+  color: #b9c8de;
+}
+
+.emergency-type-button span {
+  font-size: 14px;
+}
+
+.emergency-type-selected {
+  color: #00e5ff;
+
+  background: rgba(0, 229, 255, 0.15);
+
+  border-color: #00e5ff;
+
+  box-shadow:
+    0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.emergency-type-selected svg {
+  color: #00e5ff;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.description-section {
+  margin-bottom: 24px;
+}
+
+.description-section > label span:last-child {
+  color: #3b494c;
+}
+
+.description-section textarea {
+  width: 100%;
+  height: 128px;
+
+  display: block;
+
+  padding: 12px;
+
+  resize: none;
+
+  color: #dce4e5;
+
+  background: #0b0e14;
+
+  border: 1px solid #2d3748;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 16px;
+  line-height: 24px;
+
+  box-sizing: border-box;
+}
+
+.description-section textarea:focus {
+  border-color: #00e5ff;
+
+  box-shadow:
+    0 0 0 1px #00e5ff;
+}
+
+.description-section textarea::placeholder {
+  color: #3b494c;
+}
+
+.character-count {
+  margin-top: 4px;
+
+  text-align: right;
+
+  color: #849396;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   WAITING TIPS
+   ========================================================= */
+
+.waiting-card {
+  display: flex;
+
+  gap: 14px;
+
+  padding: 16px;
+
+  margin-bottom: 24px;
+
+  background: #242b2d;
+
+  border-left: 4px solid #fec931;
+
+  border-radius: 0 8px 8px 0;
+}
+
+.waiting-card > svg {
+  flex: 0 0 auto;
+
+  color: #fec931;
+}
+
+.waiting-card h3 {
+  margin: 0 0 6px;
+
+  color: #dce4e5;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+.waiting-card ul {
+  margin: 0;
+
+  padding-left: 18px;
+
+  color: #bac9cc;
+
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.waiting-card li {
+  margin-bottom: 4px;
+}
+
+
+/* =========================================================
+   SEND SOS
+   ========================================================= */
+
+.send-sos-button {
+  width: 100%;
+
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 14px;
+
+  color: #ffffff;
+
+  background: #ff2d55;
+
+  border: none;
+
+  border-radius: 12px;
+
+  font-size: 20px;
+  line-height: 28px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 15px rgba(255, 45, 85, 0.4);
+
+  animation:
+    sos-button-pulse 2s infinite;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.send-sos-button:hover {
+  background: #ff526f;
+}
+
+.send-sos-button:active {
+  transform: scale(0.98);
+}
+
+.send-sos-button:disabled {
+  cursor: not-allowed;
+}
+
+.send-sos-button.sending {
+  animation: none;
+
+  opacity: 0.8;
+}
+
+.send-sos-button.sos-success {
+  background: #00a896;
+
+  animation: none;
+}
+
+.send-icon-spin {
+  animation: send-spin 1s linear infinite;
+}
+
+.sos-disclaimer {
+  margin: 8px 0 0;
+
+  text-align: center;
+
+  color: #849396;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes sos-pulse {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(255, 45, 85, 0.5);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 10px rgba(255, 45, 85, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(255, 45, 85, 0);
+  }
+}
+
+@keyframes sos-button-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 15px rgba(255, 45, 85, 0.4);
+  }
+
+  50% {
+    box-shadow:
+      0 0 30px rgba(255, 45, 85, 0.8);
+  }
+}
+
+@keyframes map-marker-pulse {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(0, 229, 255, 0.7);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 15px rgba(0, 229, 255, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(0, 229, 255, 0);
+  }
+}
+
+@keyframes send-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .sos-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sos-left-column {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: start;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .sos-sidebar {
+    display: none;
+  }
+
+  .sos-topbar {
+    left: 0;
+
+    padding: 0 16px;
+  }
+
+  .sos-mobile-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #00e5ff;
+
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  .sos-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #00e5ff;
+
+    background: transparent;
+
+    border: none;
+  }
+
+  .sos-search {
+    display: none;
+  }
+
+  .sos-main {
+    margin-left: 0;
+
+    padding: 88px 16px 24px;
+  }
+
+  .sos-page-header h1 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .sos-page-header p {
+    font-size: 15px;
+    line-height: 23px;
+  }
+
+  .sos-left-column {
+    display: flex;
+  }
+
+  .sos-content-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .sos-card,
+  .situation-card {
+    padding: 16px;
+  }
+
+  .sos-page-header {
+    margin-bottom: 24px;
+  }
+
+  .sos-warning-icon {
+    width: 75px;
+    height: 75px;
+  }
+
+  .sos-warning-icon svg {
+    width: 42px;
+    height: 42px;
+  }
+
+  .sos-page-header h1 {
+    font-size: 29px;
+    line-height: 36px;
+  }
+
+  .emergency-type-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .emergency-type-button {
+    min-height: 85px;
+  }
+
+  .send-sos-button {
+    font-size: 16px;
+  }
+}
