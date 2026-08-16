@@ -8,7 +8,7 @@ import SendSOS from "../pages/user/SendSOS";
 import Shelters from "../pages/user/Shelters";
 import Alerts from "../pages/user/Alerts";
 import Settings from "../pages/user/Settings";
-
+import Register from "../pages/auth/Register";
 
 export default function AppRoutes() {
   return (
@@ -46,6 +46,11 @@ export default function AppRoutes() {
       <Route
         path="/shelters"
         element={<Shelters />}
+      />
+
+      <Route
+        path="/register"
+        element={<Register />}
       />
 
       <Route

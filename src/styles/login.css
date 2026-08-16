@@ -512,6 +512,48 @@
   cursor: not-allowed;
 }
 
+/* =========================================================
+   REGISTRATION LINK
+   ========================================================= */
+
+.register-link {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.register-link p {
+  margin: 0;
+
+  color: #bac9cc;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.register-link button {
+  margin-left: 6px;
+
+  padding: 0;
+
+  color: #00e5ff;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.register-link button:hover {
+  color: #9cf0ff;
+}
+
 /* ---------------------------------------------------------
    Footer
    --------------------------------------------------------- */

@@ -48,8 +48,8 @@ export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (
-  event: React.FormEvent<HTMLFormElement>
-) => {
+    event: React.FormEvent<HTMLFormElement>
+  ) => {
     event.preventDefault();
 
     setIsLoading(true);
@@ -113,9 +113,8 @@ export default function Login() {
                     <button
                       key={item.id}
                       type="button"
-                      className={`role-card ${
-                        selected ? "role-card-selected" : ""
-                      }`}
+                      className={`role-card ${selected ? "role-card-selected" : ""
+                        }`}
                       onClick={() => setRole(item.id)}
                       aria-pressed={selected}
                     >
@@ -256,6 +255,19 @@ export default function Login() {
                 </span>
               </button>
             </form>
+
+            {/* Registration Link */}
+            <div className="register-link">
+              <p>
+                New to ResQRoute?
+                <button
+                  type="button"
+                  onClick={() => navigate("/register")}
+                >
+                  Create an account
+                </button>
+              </p>
+            </div>
           </section>
 
           {/* Footer */}
