@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-.dist
-.node_modules
-.package-lock.json
-.package.json
+..dist
+..node_modules
+..package-lock.json
+..package.json
