@@ -1,0 +1,12 @@
+{
+  "name": "codekavach",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix frontend run dev -- --host",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview -- --host"
+  },
+  "dependencies": {
+    "axios": "^1.19.0"
+  }
+}

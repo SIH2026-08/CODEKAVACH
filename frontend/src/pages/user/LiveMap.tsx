@@ -5,19 +5,15 @@ import {
   Activity,
   Bell,
   CheckCircle,
-  ChevronRight,
   CircleAlert,
-  Flame,
   Home,
   Map,
-  MapPin,
   Navigation,
   Radio,
   Route,
   Search,
   Settings,
   Siren,
-  Waves,
 } from "lucide-react";
 
 import {

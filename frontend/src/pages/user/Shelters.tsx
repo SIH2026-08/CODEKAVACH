@@ -3,13 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 import {
   Activity,
+  Bed,
   Bell,
   CheckCircle,
-  ChevronRight,
-  CircleAlert,
   Droplets,
-  ExternalLink,
-  Flame,
   Fullscreen,
   Gauge,
   HeartPulse,
@@ -25,8 +22,6 @@ import {
   Siren,
   Utensils,
   Users,
-  Waves,
-  Bed,
 } from "lucide-react";
 
 import {
@@ -820,7 +815,7 @@ export default function Shelters() {
                   </span>
 
                   <strong>
-                    380 / 590
+                    {totalOccupied} / {totalCapacity}
                   </strong>
 
                 </div>
@@ -831,7 +826,7 @@ export default function Shelters() {
                   <div
                     className="occupancy-progress-value"
                     style={{
-                      width: "64.4%",
+                      width: `${occupancyPercentage}%`,
                     }}
                   />
 
@@ -839,7 +834,7 @@ export default function Shelters() {
 
 
                 <p>
-                  64.4% System Load
+                  {occupancyPercentage}% System Load
                 </p>
 
               </div>

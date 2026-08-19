@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { registerUser } from "../../api/auth";
 import {
   Activity,
   Badge,
@@ -64,26 +65,72 @@ export default function Register() {
     }));
   };
 
-  const handleSubmit = (
-    event: React.FormEvent<HTMLFormElement>,
-  ) => {
-    event.preventDefault();
-    setError("");
+  const handleSubmit = async (
+  event: React.FormEvent<HTMLFormElement>,
+) => {
+  event.preventDefault();
+  setError("");
 
-    if (form.authKey.length < 8) {
-      setError(
-        "Authentication key must contain at least 8 characters.",
-      );
-      return;
-    }
+  // Backend currently supports STUDENT and ADMIN.
+  // Civilian maps to STUDENT.
+  if (role !== "civilian") {
+    setError(
+      "Only Civilian registration is currently available.",
+    );
+    return;
+  }
 
-    console.log("Registration data:", {
-      ...form,
-      role,
+  if (form.authKey.length < 8) {
+    setError(
+      "Authentication key must contain at least 8 characters.",
+    );
+    return;
+  }
+
+  try {
+    const response = await registerUser({
+      name: form.fullName,
+      email: form.email,
+      password: form.authKey,
     });
 
-    navigate("/login");
-  };
+    // Store JWT
+    localStorage.setItem(
+      "accessToken",
+      response.token,
+    );
+
+    // Store user information
+    localStorage.setItem(
+      "user",
+      JSON.stringify({
+        userId: response.userId,
+        name: response.name,
+        email: response.email,
+        role: response.role,
+      }),
+    );
+
+    // Registration successful
+    navigate("/dashboard");
+
+  } catch (error: any) {
+    if (error.response?.status === 409) {
+      setError(
+        "An account with this email already exists.",
+      );
+    } else if (error.response?.status === 400) {
+      setError(
+        error.response.data?.message ||
+          "Please check your registration details.",
+      );
+    } else {
+      setError(
+        "Unable to connect to the ResQCampus server.",
+      );
+    }
+  }
+};
 
   return (
     <div className="register-page">

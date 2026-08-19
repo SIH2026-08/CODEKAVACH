@@ -6,22 +6,16 @@ import {
   AlertTriangle,
   Bell,
   CheckCircle,
-  ChevronRight,
-  CircleAlert,
   CloudRain,
   Home,
-  Info,
   Map,
   MapPin,
   Menu,
   MoreVertical,
-  Navigation,
-  Route,
   Settings,
   Siren,
   TrafficCone,
   Waves,
-  X,
 } from "lucide-react";
 
 import {

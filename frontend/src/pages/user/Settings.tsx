@@ -16,7 +16,6 @@ import {
   Settings as SettingsIcon,
   Siren,
   User,
-  X,
 } from "lucide-react";
 
 import "../../styles/settings.css";
