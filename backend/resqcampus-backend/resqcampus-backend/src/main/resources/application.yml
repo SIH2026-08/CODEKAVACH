@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: resqcampus-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/resqcampus
+    username: postgres
+    password: Oswin@1815
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true
+
+server:
+  port: 8080
+
+jwt:
+  secret: "resqcampus-jwt-secret-key-2026-this-must-be-at-least-32-bytes-long"
