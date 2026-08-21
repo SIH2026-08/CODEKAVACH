@@ -31,7 +31,7 @@ export const alerts = [
   {
     id: 1,
     title: "Earthquake",
-    location: "San Francisco",
+    location: "Delhi NCR",
     distance: "2.3km away",
     severity: "CRITICAL",
     magnitude: "7.2 MAG",
@@ -41,7 +41,7 @@ export const alerts = [
   {
     id: 2,
     title: "Flood Warning",
-    location: "Downtown Area",
+    location: "Patna",
     distance: "",
     severity: "HIGH",
     icon: "flood",
@@ -50,7 +50,7 @@ export const alerts = [
   {
     id: 3,
     title: "Wildfire",
-    location: "Forest Hills",
+    location: "Uttarakhand",
     distance: "",
     severity: "MEDIUM",
     icon: "fire",
@@ -61,7 +61,7 @@ export const alerts = [
 export const shelters = [
   {
     id: 1,
-    name: "Community Center",
+    name: "Noida Community Shelter",
     distance: "1.2km away",
     occupancy: 45,
     capacity: 80,
@@ -70,7 +70,7 @@ export const shelters = [
   },
   {
     id: 2,
-    name: "Sports Complex",
+    name: "Jaypee Greens Sports Complex",
     distance: "3.5km away",
     occupancy: 120,
     capacity: 150,
@@ -119,15 +119,14 @@ export const recentActivity = [
     id: 1,
     time: "JUST NOW",
     message:
-      "New CRITICAL alert: Earthquake detected in San Francisco region.",
+      "New CRITICAL alert: Earthquake detected in Delhi NCR region.",
     variant: "critical",
   },
   {
     id: 2,
     time: "12 MINS AGO",
     message:
-      "Safe route updated for Highway 101 Northbound Evacuation.",
-    variant: "active",
+      "Safe evacuation route updated for Greater Noida.",
   },
   {
     id: 3,

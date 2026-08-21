@@ -56,15 +56,15 @@ export const emergencyContacts = [
   {
     id: 1,
     type: "PRIMARY",
-    name: "Sarah Jenkins",
-    phone: "+1 (555) 019-8274",
+    name: "Family Emergency Contact",
+    phone: "+91 XXXXX XXXXX",
     action: "call",
   },
   {
     id: 2,
     type: "SECONDARY",
-    name: "Local Dispatch",
-    phone: "911 / 112",
+    name: "Emergency Services",
+    phone: "112",
     action: "dispatch",
   },
 ];

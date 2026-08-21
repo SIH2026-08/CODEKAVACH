@@ -357,9 +357,8 @@ export default function SendSOS() {
           </h1>
 
           <p>
-            Send an immediate, high-priority alert to
-            rescue teams in your vicinity. Provide
-            details below to expedite assistance.
+            send an immediate emergency alert to nearby rescue teams.
+            Share your location and essential details for faster assistance.
           </p>
 
         </section>
@@ -456,14 +455,14 @@ export default function SendSOS() {
                   COORD:
                 </span>
 
-                37.7749° N, 122.4194° W
+               28.6139° N, 77.2090° E
 
               </div>
 
 
               <div className="location-name">
 
-                San Francisco, CA, USA
+                Delhi NCR, India
 
               </div>
 
@@ -509,12 +508,11 @@ export default function SendSOS() {
                       <div>
 
                         <span
-                          className={`contact-type ${
-                            contact.action ===
-                            "dispatch"
+                          className={`contact-type ${contact.action ===
+                              "dispatch"
                               ? "contact-secondary"
                               : ""
-                          }`}
+                            }`}
                         >
                           {contact.type}
                         </span>
@@ -531,12 +529,11 @@ export default function SendSOS() {
 
 
                       <button
-                        className={`call-button ${
-                          contact.action ===
-                          "dispatch"
+                        className={`call-button ${contact.action ===
+                            "dispatch"
                             ? "dispatch-call"
                             : ""
-                        }`}
+                          }`}
                         onClick={() =>
                           handleCall(
                             contact.phone
@@ -600,11 +597,10 @@ export default function SendSOS() {
                         <button
                           key={emergency.id}
                           type="button"
-                          className={`emergency-type-button ${
-                            isSelected
+                          className={`emergency-type-button ${isSelected
                               ? "emergency-type-selected"
                               : ""
-                          }`}
+                            }`}
                           onClick={() =>
                             setSelectedEmergency(
                               emergency.id
@@ -708,15 +704,13 @@ export default function SendSOS() {
               ============================================= */}
 
               <button
-                className={`send-sos-button ${
-                  isSending
+                className={`send-sos-button ${isSending
                     ? "sending"
                     : ""
-                } ${
-                  sosSent
+                  } ${sosSent
                     ? "sos-success"
                     : ""
-                }`}
+                  }`}
                 onClick={handleSendSOS}
                 disabled={isSending || sosSent}
               >

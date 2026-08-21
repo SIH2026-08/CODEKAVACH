@@ -27,9 +27,9 @@ export interface Shelter {
 export const shelters: Shelter[] = [
   {
     id: "SHELTER-001",
-    name: "Community Center North",
+    name: "Noida Community Shelter",
     status: "available",
-    address: "1042 Sector B, Northern District",
+    address: "Sector 18, Noida, Uttar Pradesh",
     distance: "1.2 km",
     occupied: 45,
     capacity: 80,
@@ -57,9 +57,9 @@ export const shelters: Shelter[] = [
 
   {
     id: "SHELTER-002",
-    name: "Sports Complex East",
+    name: "Jaypee Greens Sports Complex",
     status: "limited",
-    address: "88 Stadium Rd, Eastern Ward",
+    address: "Sector 25, along Yamuna Expressway, Gautam Budh Nagar, Uttar Pradesh",
     distance: "3.5 km",
     occupied: 120,
     capacity: 150,

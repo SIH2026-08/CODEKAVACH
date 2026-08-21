@@ -53,11 +53,11 @@ export default function Settings() {
 
   const [profile, setProfile] =
     useState<ProfileData>({
-      firstName: "Alex",
-      lastName: "Morgan",
-      email: "alex.morgan@resqroute.gov",
-      phone: "+1 (555) 019-2834",
-      base: "Sector 4 Command Center, 1042 Beacon St.",
+      firstName: "Team",
+      lastName: "Titans",
+      email: "teamtitans@resqconnect.com",
+      phone: "+91 XXXXXXXXXX",
+      base: "Delhi NCR Emergency Response Center, Greater Noida, Uttar Pradesh",
     });
 
 
@@ -119,11 +119,11 @@ export default function Settings() {
   const handleCancel = () => {
 
     setProfile({
-      firstName: "Alex",
-      lastName: "Morgan",
-      email: "alex.morgan@resqroute.gov",
-      phone: "+1 (555) 019-2834",
-      base: "Sector 4 Command Center, 1042 Beacon St.",
+      firstName: "Tech",
+      lastName: "Titans",
+      email: "teamtitans@resqconnect.com",
+      phone: "+91 XXXXXXXXXX",
+      base: "Delhi NCR Emergency Response Center, Greater Noida, Uttar Pradesh",
     });
 
     setSaved(false);
@@ -682,7 +682,7 @@ function ProfileSettings({
 
           <button className="secondary-button">
 
-            Change Avatar
+            Change profile
 
           </button>
 
@@ -1112,7 +1112,7 @@ function EmergencyContacts() {
             </strong>
 
             <span>
-              +1 (555) 911-1000
+              +91 XXXXXXXXXX
             </span>
 
           </div>
@@ -1141,7 +1141,7 @@ function EmergencyContacts() {
             </strong>
 
             <span>
-              +1 (555) 019-2840
+              +91 XXXXXXXXXX
             </span>
 
           </div>
@@ -1199,8 +1199,7 @@ function AppearanceSettings({
           </h3>
 
           <p>
-            Customize the visual appearance
-            of CODEKAVACH.
+           Customize your emergency dashboard appearance and preferences.
           </p>
 
         </div>

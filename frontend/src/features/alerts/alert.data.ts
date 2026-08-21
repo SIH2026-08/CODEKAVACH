@@ -20,8 +20,8 @@ export const alerts: DisasterAlert[] = [
     time: "2 min ago",
     title: "Earthquake Alert: 7.2 Magnitude Detected",
     description:
-      "A major earthquake has been detected in Downtown San Francisco. Seek immediate shelter and stay away from windows.",
-    location: "San Francisco, CA",
+      "A major earthquake has been detected in New Delhi. Seek immediate shelter and stay away from windows.",
+    location: "New Delhi,India",
     actionLabel: "View on Map",
     read: false,
   },
