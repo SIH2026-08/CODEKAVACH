@@ -226,9 +226,9 @@ export default function Register() {
               {/* Full Name */}
               <RegisterField
                 id="fullName"
-                label="Full Legal Name"
+                label="Full Name"
                 icon={<Badge size={19} />}
-                placeholder="e.g. Jane Doe"
+                placeholder="e.g. Tech Titan"
                 type="text"
                 value={form.fullName}
                 onChange={(value) =>
@@ -239,9 +239,9 @@ export default function Register() {
               {/* Email */}
               <RegisterField
                 id="email"
-                label="Comm Channel (Email)"
+                label="Email"
                 icon={<Mail size={19} />}
-                placeholder="node@network.org"
+                placeholder="teamtitans@resqconnect.com"
                 type="email"
                 value={form.email}
                 onChange={(value) =>
@@ -254,7 +254,7 @@ export default function Register() {
                 id="phone"
                 label="Direct Contact (Phone)"
                 icon={<Phone size={19} />}
-                placeholder="+1 (555) 000-0000"
+                placeholder="+91 XXXXX XXXXX"
                 type="tel"
                 value={form.phone}
                 onChange={(value) =>
@@ -268,7 +268,7 @@ export default function Register() {
                   className="register-label"
                   htmlFor="authKey"
                 >
-                  Create Authentication Key
+                  Password
                 </label>
 
                 <div className="register-input-wrap">
@@ -284,7 +284,7 @@ export default function Register() {
                         ? "text"
                         : "password"
                     }
-                    placeholder="Enter secure key"
+                    placeholder="Enter Strong Password"
                     value={form.authKey}
                     onChange={(event) =>
                       updateField(

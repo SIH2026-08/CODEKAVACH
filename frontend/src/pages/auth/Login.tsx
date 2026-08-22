@@ -41,7 +41,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const [role, setRole] = useState<UserRole>("user");
-  const [email, setEmail] = useState("alex.morgan@resqroute.gov");
+  const [email, setEmail] = useState("teamtitans@resqconnect.com");
   const [password, setPassword] = useState("password123");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
@@ -147,7 +147,7 @@ export default function Login() {
               {/* Email */}
               <div className="form-group">
                 <label htmlFor="email">
-                  Operator ID / Email
+                  Email
                 </label>
 
                 <div className="input-wrapper">
@@ -171,7 +171,7 @@ export default function Login() {
               <div className="form-group">
                 <div className="password-label-row">
                   <label htmlFor="password">
-                    Authentication Key
+                    Password
                   </label>
 
                   <button
@@ -182,7 +182,7 @@ export default function Login() {
                       console.log("Forgot key clicked");
                     }}
                   >
-                    Forgot key?
+                    Forgot Password?
                   </button>
                 </div>
 
@@ -251,7 +251,7 @@ export default function Login() {
                 <span>
                   {isLoading
                     ? "Authenticating..."
-                    : "Access Command Center"}
+                    : "Login"}
                 </span>
               </button>
             </form>
@@ -259,7 +259,7 @@ export default function Login() {
             {/* Registration Link */}
             <div className="register-link">
               <p>
-                New to ResQRoute?
+                New to ResQCampus?
                 <button
                   type="button"
                   onClick={() => navigate("/register")}
