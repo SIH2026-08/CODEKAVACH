@@ -164,7 +164,7 @@ export default function SendSOS() {
           </button>
 
           <span>
-            ResQRoute
+            ResQCampus
           </span>
 
         </div>
@@ -220,7 +220,7 @@ export default function SendSOS() {
           <div>
 
             <h1>
-              ResQRoute
+              ResQCampus
             </h1>
 
             <p>

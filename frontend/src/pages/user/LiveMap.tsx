@@ -98,7 +98,7 @@ export default function LiveMap() {
 
         <div className="map-topbar-brand">
 
-          ResQRoute
+          ResQCampus
 
         </div>
 
@@ -158,7 +158,7 @@ export default function LiveMap() {
           <div>
 
             <h1>
-              ResQRoute
+              ResQCampus
             </h1>
 
             <p>

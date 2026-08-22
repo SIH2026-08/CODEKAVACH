@@ -91,7 +91,7 @@ export default function Login() {
                 <ShieldCheck size={42} strokeWidth={1.7} />
               </div>
 
-              <h1>ResQRoute</h1>
+              <h1>ResQCampus</h1>
 
               <p>
                 Precision Disaster Management &amp; Response

@@ -207,7 +207,7 @@ export default function Alerts() {
         <div className="alerts-sidebar-brand">
 
           <h1>
-            ResQRoute
+            ResQCampus
           </h1>
 
           <p>
@@ -336,7 +336,7 @@ export default function Alerts() {
           </button>
 
           <span>
-            ResQRoute
+            ResQCampus
           </span>
 
         </div>

@@ -251,7 +251,7 @@ export default function Shelters() {
         <div className="shelters-topbar-left">
 
           <span className="shelters-brand">
-            ResQRoute
+            ResQCampus
           </span>
 
 
@@ -324,7 +324,7 @@ export default function Shelters() {
           <div>
 
             <h1>
-              ResQRoute
+              ResQCampus
             </h1>
 
             <p>

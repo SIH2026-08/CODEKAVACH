@@ -83,7 +83,7 @@ export default function Dashboard() {
             <Menu size={22} />
           </button>
 
-          <span>ResQRoute</span>
+          <span>ResQCampus</span>
         </div>
 
         <div className="topbar-actions">
@@ -130,7 +130,7 @@ export default function Dashboard() {
           </div>
 
           <div>
-            <h1>ResQRoute</h1>
+            <h1>ResQCampus</h1>
 
             <p>
               Precision Disaster Management

@@ -159,7 +159,7 @@ export default function Register() {
                 />
               </div>
 
-              <h1>ResQRoute</h1>
+              <h1>ResQCampus</h1>
 
               <p>
                 Precision Disaster Management &amp; Response

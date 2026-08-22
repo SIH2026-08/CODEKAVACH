@@ -169,7 +169,7 @@ export default function Settings() {
           <div>
 
             <h1>
-              ResQRoute
+              ResQCampus
             </h1>
 
             <p>
@@ -322,7 +322,7 @@ export default function Settings() {
           <Siren size={22} />
 
           <span>
-            ResQRoute
+            ResQCampus
           </span>
 
         </div>
